@@ -93,32 +93,4 @@ class OrmCodeGenerator {
 	static def generateSubsetIcs(SubsetConstraintType sc) '''
 		«sc.roleSequences»
 	'''
-
-//		val objects = model.objects
-//		val facts = model.facts.fact
-//		
-//		for (EntityTypeType entity : objects.entityType) {
-//			println("ENTITY: " + entity.name)
-//			entity.playedRoles.role.forEach[r | println("\tROLE NAME: " + facts.filter[f | f.factRoles.role.filter[fr | fr.id == r.ref].size() > 0].get(0).name)]
-//		}
-//		
-//		val facts = model.facts
-//		
-//		for (FactTypeType fact : facts.fact) {
-//			println("FACT: " + fact.name)
-//			
-//			for(RoleType role : fact.factRoles.role) {
-//				println("\tROLE: " + role.name)
-//			}
-//		}
-//		for (UniquenessConstraintType constraint : constraints.uniquenessConstraint) {
-//			println(constraint.preferredIdentifierFor)
-//		}
-//
-//		for (FactTypeType fact : facts) {
-//			val uniquenessConstraints = fact.factRoles.role.filter[it instanceof UniquenessConstraintType].map[it as UniquenessConstraintType]
-//			for (UniquenessConstraintType uniquenessConstraint : uniquenessConstraints) {
-//				generate(uniquenessConstraint);
-//			}
-//		}
 }
