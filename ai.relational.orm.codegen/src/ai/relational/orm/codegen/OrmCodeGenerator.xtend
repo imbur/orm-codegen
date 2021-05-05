@@ -6,11 +6,11 @@ import edu.neumont.schemas.orm._2006._04.orm.core.ORMModelType
 import edu.neumont.schemas.orm._2006._04.orm.core.RoleRef
 import edu.neumont.schemas.orm._2006._04.orm.core.SubsetConstraintType
 
-import static extension ai.relational.orm.codegen.GeneratorHelper.toSnakeCase
+import static extension ai.relational.orm.codegen.GeneratorHelper.isBooleanAttributeName
 import static extension ai.relational.orm.codegen.GeneratorHelper.lookUpRelDataType
-import edu.neumont.schemas.orm._2006._04.orm.core.FactTypeType
-import edu.neumont.schemas.orm._2006._04.orm.core.FactTypesType
-import edu.neumont.schemas.orm._2006._04.orm.core.ValueTypeType
+import static extension ai.relational.orm.codegen.GeneratorHelper.purgeAuxiliaryVerbsFromBeginning
+import static extension ai.relational.orm.codegen.GeneratorHelper.toSnakeCase
+import static extension ai.relational.orm.codegen.GeneratorHelper.purgeNonAlphaChars
 
 class OrmCodeGenerator {
 
@@ -20,6 +20,7 @@ class OrmCodeGenerator {
 
 		val entities = model.objects.entityType
 		val facts = model.facts.fact
+		val roles = model.facts.fact.map[it.factRoles.role].flatten
 		val subtypeFacts = model.facts.subtypeFact
 		val subsetConstraints = model.constraints.subsetConstraint
 		val valueTypes = model.objects.valueType
@@ -57,12 +58,14 @@ class OrmCodeGenerator {
 				val entityRole = fact.factRoles.role.findFirst[id != roleRef.ref]
 				val entity = entities.findFirst[id == entityRole.rolePlayer.ref]
 				val dataTypeName = valueType.conceptualDataType.ref.lookUpRelDataType
-				builder.append(generateAttributeTypeIcs(entity,valueType,fact,dataTypeName))
+				val rawRelationNameFromFact = fact.name.replaceFirst(entity.name, "")
+				val relationNameFromFact = rawRelationNameFromFact.purgeAuxiliaryVerbsFromBeginning
+				if(rawRelationNameFromFact.isBooleanAttributeName){
+					builder.append(generateAttributeTypeIcs(relationNameFromFact, entity))
+				} else {
+					builder.append(generateAttributeTypeIcs(relationNameFromFact, entity, dataTypeName))
+				}
 			}
-		}
-
-		for (fact : facts) {
-//			println(fact.name)
 		}
 
 		// TODO
@@ -72,12 +75,16 @@ class OrmCodeGenerator {
 			 */
 		''')
 		for (sc : subsetConstraints) {
-			generateSubsetIcs(sc)
+			val factOfSubsetRole = facts.findFirst[it.factRoles.role.filter[id == sc.roleSequences.roleSequence.get(0).role.head.ref].size > 0]
+			val factOfSupersetRole = facts.findFirst[it.factRoles.role.filter[id == sc.roleSequences.roleSequence.get(1).role.head.ref].size > 0]
+			val subsetFactVerbalized = factOfSubsetRole.readingOrders.readingOrder.head.readings.reading.head.data.purgeNonAlphaChars
+			val supersetFactVerbalized = factOfSupersetRole.readingOrders.readingOrder.head.readings.reading.head.data.purgeNonAlphaChars
+			generateSubsetIcs(subsetFactVerbalized, supersetFactVerbalized)
 		}
 
 		println(builder.toString)
 	}
-	
+
 	static def generateSubTypeIcs(EntityTypeType subtype, EntityTypeType supertype) '''
 		ic «subtype.name.toSnakeCase»_subtype(e) { «subtype.name»(e) implies «supertype.name»(e) }
 	'''
@@ -86,11 +93,22 @@ class OrmCodeGenerator {
 		ic «type.name.toSnakeCase»_entity(e) { «type.name»(e) implies Entity(e) }
 	'''
 
-	static def generateAttributeTypeIcs(EntityTypeType entity, ValueTypeType valueType, FactTypeType fact, String dataTypeName) '''
-		ic «valueType.name.toSnakeCase»_types(e, v) { «valueType.name.toSnakeCase»(e, v) implies «entity.name»(e) and «dataTypeName»(v) }
+	// Boolean attribute type constraint translates to checking if an entity is in a relation or not
+	// No value is actually stored (unlike in case of other attribute types)
+	static def generateAttributeTypeIcs(String relationName, EntityTypeType entity) '''
+		ic «relationName.toSnakeCase»_types(e) { «relationName.toSnakeCase»(e) implies «entity.name»(e) }
+	'''
+	
+	static def generateAttributeTypeIcs(String relationName, EntityTypeType entity, String dataTypeName) '''
+		ic «relationName.toSnakeCase»_types(e, v) { «relationName.toSnakeCase»(e, v) implies «entity.name»(e) and «dataTypeName»(v) }
 	'''
 
-	static def generateSubsetIcs(SubsetConstraintType sc) '''
-		«sc.roleSequences»
+
+	static def generateSubsetIcs(String subVerbalized, String supVerbalized) '''
+		ic work_order_«subVerbalized»_subsets_«supVerbalized»(w, v) {
+		    work_ended(w, v)
+		    implies
+		    exists(s: work_started(w, s))
+		}
 	'''
 }

@@ -32,6 +32,8 @@ public class GeneratorRunner {
 			Object value = entry.getValue();
 			if (value instanceof ORMModelType) {
 				model = (ORMModelType) value;
+			} else {
+				System.out.println(value);
 			}
 		}
 		

@@ -47,7 +47,7 @@ public class GeneratorHelper {
 				model.getDataTypes().getFixedLengthTextDataType().get(0).getId(), "String");
 		// <orm:TimeTemporalDataType id="_FCB6A973-D8CF-4229-94E3-CA86583AA17E" />
 		dataTypeIdToDataTypeName.put(
-				model.getDataTypes().getTimeTemporalDataType().get(0).getId(), "String");
+				model.getDataTypes().getTimeTemporalDataType().get(0).getId(), "Int");
 		// @formatter:on
 	}
 
@@ -80,6 +80,28 @@ public class GeneratorHelper {
 		return builder.toString();
 	}
 
+	// TODO extract hard-coded strings to constants
+	public static boolean isBooleanAttributeName(String name) {
+		return name.startsWith("is") || name.startsWith("Is");
+	}
+
+	// TODO extract hard-coded strings to constants
+	public static String purgeAuxiliaryVerbsFromBeginning(String name) {
+		// @formatter:off
+		return name
+				.replaceFirst("^has","")
+				.replaceFirst("^Has","")
+				.replaceFirst("^is","")
+				.replaceFirst("^Is","")
+				;
+		//@formatter:on
+	}
+	
+	// TODO this method is surely not complete in this form
+	public static String purgeNonAlphaChars(String name) {
+		return name.trim().replaceAll("[^a-zA-Z]", " ").trim().replaceAll(" ", "_");
+	}
+	
 	/**
 	 * It is necessary to remove the diagram display information from the model
 	 * file, otherwise the XML model cannot be loaded. This method takes care of
