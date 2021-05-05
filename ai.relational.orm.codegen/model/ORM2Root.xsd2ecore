@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="file:/Users/mbur/Desktop/Schemas/ORM2Root.xsd#/"
+    outputs="root.ecore#/" topToBottom="true">
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Root.xsd#//ORM2;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="root.ecore#//ORM2Type">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Root.xsd#//ORM2;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="root.ecore#//ORM2Type/any"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Root.xsd#//ORM2;XSDElementDeclaration"
+      outputs="root.ecore#//DocumentRoot/oRM2"/>
+</xsd2ecore:XSD2EcoreMappingRoot>

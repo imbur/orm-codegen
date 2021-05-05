@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#/"
+    outputs="diagram.ecore#/" topToBottom="true">
+  <nested inputs="bundleentry://466.fwk1086022947/cache/www.w3.org/2001/XMLSchema.xsd#//string;XSDSimpleTypeDefinition=9"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <nested inputs="bundleentry://466.fwk1086022947/cache/www.w3.org/2001/XMLSchema.xsd#//ID;XSDSimpleTypeDefinition=37"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//ID"/>
+  <nested inputs="bundleentry://466.fwk1086022947/cache/www.w3.org/2001/XMLSchema.xsd#//boolean;XSDSimpleTypeDefinition=10"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ShapeType;XSDComplexTypeDefinition=1"
+      outputs="diagram.ecore#//ShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ShapeType;XSDComplexTypeDefinition=1/XSDAttributeUse=2"
+        outputs="diagram.ecore#//ShapeType/absoluteBounds"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ShapeType;XSDComplexTypeDefinition=1/XSDAttributeUse"
+        outputs="diagram.ecore#//ShapeType/id"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ShapeType;XSDComplexTypeDefinition=1/XSDAttributeUse=1"
+        outputs="diagram.ecore#//ShapeType/isExpanded"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//DiagramExtensionShape;XSDElementDeclaration=1"
+      outputs="diagram.ecore#//DocumentRoot/diagramExtensionShape"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeRelativeExtensionShape;XSDElementDeclaration=3"
+      outputs="diagram.ecore#//DocumentRoot/factTypeRelativeExtensionShape"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeRelativeExtensionShape;XSDElementDeclaration=2"
+      outputs="diagram.ecore#//DocumentRoot/objectTypeRelativeExtensionShape"/>
+  <nested inputs="bundleentry://466.fwk1086022947/cache/www.w3.org/2001/XMLSchema.xsd#//IDREF;XSDSimpleTypeDefinition=38"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//IDREF"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//SubjectRef;XSDComplexTypeDefinition=13"
+      outputs="diagram.ecore#//SubjectRef">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//SubjectRef;XSDComplexTypeDefinition=13/XSDAttributeUse"
+        outputs="diagram.ecore#//SubjectRef/ref"/>
+  </nested>
+  <nested inputs="bundleentry://466.fwk1086022947/cache/www.w3.org/2001/XMLSchema.xsd#//short;XSDSimpleTypeDefinition=45"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Short"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ValueConstraintShapeType;XSDComplexTypeDefinition=5/XSDAttributeUse=1/MaximumDisplayedColumns;XSDAttributeDeclaration/XSDSimpleTypeDefinition"
+      outputs="diagram.ecore#//MaximumDisplayedColumnsType"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ValueConstraintShapeType;XSDComplexTypeDefinition=5/XSDAttributeUse/MaximumDisplayedValues;XSDAttributeDeclaration/XSDSimpleTypeDefinition"
+      outputs="diagram.ecore#//MaximumDisplayedValuesType"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ValueConstraintShapeType;XSDComplexTypeDefinition=5"
+      outputs="diagram.ecore#//ValueConstraintShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ValueConstraintShapeType;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//ValueConstraintShapeType/subject"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ValueConstraintShapeType;XSDComplexTypeDefinition=5/XSDAttributeUse=1"
+        outputs="diagram.ecore#//ValueConstraintShapeType/maximumDisplayedColumns"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ValueConstraintShapeType;XSDComplexTypeDefinition=5/XSDAttributeUse"
+        outputs="diagram.ecore#//ValueConstraintShapeType/maximumDisplayedValues"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//CardinalityConstraintShapeType;XSDComplexTypeDefinition=11"
+      outputs="diagram.ecore#//CardinalityConstraintShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//CardinalityConstraintShapeType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//CardinalityConstraintShapeType/subject"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="diagram.ecore#//RelativeShapesType1">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle"
+        outputs="diagram.ecore#//RelativeShapesType1/group"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//RelativeShapesType1/valueConstraintShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="diagram.ecore#//RelativeShapesType1/cardinalityConstraintShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="diagram.ecore#//RelativeShapesType1/objectTypeRelativeExtensionShapeGroup"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="diagram.ecore#//RelativeShapesType1/objectTypeRelativeExtensionShape"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//DisplayRelatedTypesType;XSDSimpleTypeDefinition"
+      outputs="diagram.ecore#//DisplayRelatedTypesType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//DisplayRelatedTypesType;XSDSimpleTypeDefinition/XSDEnumerationFacet"
+        outputs="diagram.ecore#//DisplayRelatedTypesType/AttachAllTypes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//DisplayRelatedTypesType;XSDSimpleTypeDefinition/XSDEnumerationFacet=1"
+        outputs="diagram.ecore#//DisplayRelatedTypesType/AttachSubtypes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//DisplayRelatedTypesType;XSDSimpleTypeDefinition/XSDEnumerationFacet=2"
+        outputs="diagram.ecore#//DisplayRelatedTypesType/AttachSupertypes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//DisplayRelatedTypesType;XSDSimpleTypeDefinition/XSDEnumerationFacet=3"
+        outputs="diagram.ecore#//DisplayRelatedTypesType/AttachNoTypes"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2"
+      outputs="diagram.ecore#//ObjectTypeShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//ObjectTypeShapeType/relativeShapes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="diagram.ecore#//ObjectTypeShapeType/subject"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDAttributeUse=1"
+        outputs="diagram.ecore#//ObjectTypeShapeType/displayRelatedTypes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ObjectTypeShapeType;XSDComplexTypeDefinition=2/XSDAttributeUse"
+        outputs="diagram.ecore#//ObjectTypeShapeType/expandRefMode"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ReadingShapeType;XSDComplexTypeDefinition=4"
+      outputs="diagram.ecore#//ReadingShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ReadingShapeType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//ReadingShapeType/subject"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//RoleNameShapeType;XSDComplexTypeDefinition=6"
+      outputs="diagram.ecore#//RoleNameShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//RoleNameShapeType;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//RoleNameShapeType/subject"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="diagram.ecore#//RelativeShapesType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle"
+        outputs="diagram.ecore#//RelativeShapesType/group"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//RelativeShapesType/objectifiedFactTypeNameShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="diagram.ecore#//RelativeShapesType/readingShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="diagram.ecore#//RelativeShapesType/valueConstraintShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="diagram.ecore#//RelativeShapesType/roleNameShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="diagram.ecore#//RelativeShapesType/cardinalityConstraintShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="diagram.ecore#//RelativeShapesType/factTypeRelativeExtensionShapeGroup"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle/RelativeShapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="diagram.ecore#//RelativeShapesType/factTypeRelativeExtensionShape"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=2/RoleDisplayOrder;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Role;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="diagram.ecore#//RoleType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=2/RoleDisplayOrder;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Role;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="diagram.ecore#//RoleType/ref"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=2/RoleDisplayOrder;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="diagram.ecore#//RoleDisplayOrderType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=2/RoleDisplayOrder;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle"
+        outputs="diagram.ecore#//RoleDisplayOrderType/group"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=2/RoleDisplayOrder;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//RoleDisplayOrderType/role"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=1/ConstraintDisplayPosition;XSDAttributeDeclaration/XSDSimpleTypeDefinition"
+      outputs="diagram.ecore#//ConstraintDisplayPositionType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=1/ConstraintDisplayPosition;XSDAttributeDeclaration/XSDSimpleTypeDefinition/XSDEnumerationFacet"
+        outputs="diagram.ecore#//ConstraintDisplayPositionType/Top"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=1/ConstraintDisplayPosition;XSDAttributeDeclaration/XSDSimpleTypeDefinition/XSDEnumerationFacet=1"
+        outputs="diagram.ecore#//ConstraintDisplayPositionType/Bottom"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=2/DisplayOrientation;XSDAttributeDeclaration/XSDSimpleTypeDefinition"
+      outputs="diagram.ecore#//DisplayOrientationType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=2/DisplayOrientation;XSDAttributeDeclaration/XSDSimpleTypeDefinition/XSDEnumerationFacet"
+        outputs="diagram.ecore#//DisplayOrientationType/Horizontal"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=2/DisplayOrientation;XSDAttributeDeclaration/XSDSimpleTypeDefinition/XSDEnumerationFacet=1"
+        outputs="diagram.ecore#//DisplayOrientationType/VerticalRotatedRight"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=2/DisplayOrientation;XSDAttributeDeclaration/XSDSimpleTypeDefinition/XSDEnumerationFacet=2"
+        outputs="diagram.ecore#//DisplayOrientationType/VerticalRotatedLeft"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse/DisplayRoleNames;XSDAttributeDeclaration/XSDSimpleTypeDefinition"
+      outputs="diagram.ecore#//DisplayRoleNamesType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse/DisplayRoleNames;XSDAttributeDeclaration/XSDSimpleTypeDefinition/XSDEnumerationFacet"
+        outputs="diagram.ecore#//DisplayRoleNamesType/UserDefault"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse/DisplayRoleNames;XSDAttributeDeclaration/XSDSimpleTypeDefinition/XSDEnumerationFacet=1"
+        outputs="diagram.ecore#//DisplayRoleNamesType/Off"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse/DisplayRoleNames;XSDAttributeDeclaration/XSDSimpleTypeDefinition/XSDEnumerationFacet=2"
+        outputs="diagram.ecore#//DisplayRoleNamesType/On"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3"
+      outputs="diagram.ecore#//FactTypeShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//FactTypeShapeType/relativeShapes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="diagram.ecore#//FactTypeShapeType/subject"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="diagram.ecore#//FactTypeShapeType/roleDisplayOrder"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=1"
+        outputs="diagram.ecore#//FactTypeShapeType/constraintDisplayPosition"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=5"
+        outputs="diagram.ecore#//FactTypeShapeType/displayAsObjectType"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=2"
+        outputs="diagram.ecore#//FactTypeShapeType/displayOrientation"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=3"
+        outputs="diagram.ecore#//FactTypeShapeType/displayRelatedTypes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse"
+        outputs="diagram.ecore#//FactTypeShapeType/displayRoleNames"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FactTypeShapeType;XSDComplexTypeDefinition=3/XSDAttributeUse=4"
+        outputs="diagram.ecore#//FactTypeShapeType/expandRefMode"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ExternalConstraintShapeType;XSDComplexTypeDefinition=7"
+      outputs="diagram.ecore#//ExternalConstraintShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ExternalConstraintShapeType;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//ExternalConstraintShapeType/subject"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//FrequencyConstraintShapeType;XSDComplexTypeDefinition=8"
+      outputs="diagram.ecore#//FrequencyConstraintShapeType"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//RingConstraintShapeType;XSDComplexTypeDefinition=9"
+      outputs="diagram.ecore#//RingConstraintShapeType"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ValueComparisonConstraintShapeType;XSDComplexTypeDefinition=10"
+      outputs="diagram.ecore#//ValueComparisonConstraintShapeType"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ModelNoteShapeType;XSDComplexTypeDefinition=12"
+      outputs="diagram.ecore#//ModelNoteShapeType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ModelNoteShapeType;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//ModelNoteShapeType/subject"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="diagram.ecore#//ShapesType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle"
+        outputs="diagram.ecore#//ShapesType/group"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//ShapesType/objectTypeShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="diagram.ecore#//ShapesType/factTypeShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="diagram.ecore#//ShapesType/externalConstraintShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="diagram.ecore#//ShapesType/frequencyConstraintShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="diagram.ecore#//ShapesType/ringConstraintShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="diagram.ecore#//ShapesType/valueComparisonConstraintShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="diagram.ecore#//ShapesType/modelNoteShape"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=7"
+        outputs="diagram.ecore#//ShapesType/diagramExtensionShapeGroup"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/Shapes;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=7"
+        outputs="diagram.ecore#//ShapesType/diagramExtensionShape"/>
+  </nested>
+  <nested inputs="bundleentry://466.fwk1086022947/cache/www.w3.org/2001/XMLSchema.xsd#//decimal;XSDSimpleTypeDefinition=13"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Decimal"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition"
+      outputs="diagram.ecore#//ORMDiagramType">
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="diagram.ecore#//ORMDiagramType/shapes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="diagram.ecore#//ORMDiagramType/subject"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDAttributeUse=5"
+        outputs="diagram.ecore#//ORMDiagramType/autoPopulateShapes"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDAttributeUse=3"
+        outputs="diagram.ecore#//ORMDiagramType/baseFontName"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDAttributeUse=4"
+        outputs="diagram.ecore#//ORMDiagramType/baseFontSize"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="diagram.ecore#//ORMDiagramType/id"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDAttributeUse=1"
+        outputs="diagram.ecore#//ORMDiagramType/isCompleteView"/>
+    <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagramType;XSDComplexTypeDefinition/XSDAttributeUse=2"
+        outputs="diagram.ecore#//ORMDiagramType/name"/>
+  </nested>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//ORMDiagram;XSDElementDeclaration"
+      outputs="diagram.ecore#//DocumentRoot/oRMDiagram"/>
+  <nested inputs="file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd#//Subject;XSDElementDeclaration=4"
+      outputs="diagram.ecore#//DocumentRoot/subject"/>
+</xsd2ecore:XSD2EcoreMappingRoot>

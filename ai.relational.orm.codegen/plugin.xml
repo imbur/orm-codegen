@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ORM2Core -->
+      <package
+            uri="http://schemas.neumont.edu/ORM/2006-04/ORMCore"
+            class="edu.neumont.schemas.orm._2006._04.orm.core.CorePackage"
+            genModel="model/ORM2Core.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ORM2Core -->
+      <parser
+            type="core"
+            class="edu.neumont.schemas.orm._2006._04.orm.core.util.CoreResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ORM2Root -->
+      <package
+            uri="http://schemas.neumont.edu/ORM/2006-04/ORMRoot"
+            class="edu.neumont.schemas.orm._2006._04.orm.root.RootPackage"
+            genModel="model/ORM2Root.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ORM2Root -->
+      <parser
+            type="root"
+            class="edu.neumont.schemas.orm._2006._04.orm.root.util.RootResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ORM2Diagram -->
+      <package
+            uri="http://schemas.neumont.edu/ORM/2006-04/ORMDiagram"
+            class="edu.neumont.schemas.orm._2006._04.orm.diagram.DiagramPackage"
+            genModel="model/ORM2Diagram.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ORM2Diagram -->
+      <parser
+            type="diagram"
+            class="edu.neumont.schemas.orm._2006._04.orm.diagram.util.DiagramResourceFactoryImpl"/>
+   </extension>
+</plugin>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:DocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://schemas.neumont.edu/ORM/2006-04/ORMCore" xsi:schemaLocation="http://schemas.neumont.edu/ORM/2006-04/ORMCore ../core.ecore">
+  <oRMModel>
+    <objects/>
+  </oRMModel>
+</core:DocumentRoot>

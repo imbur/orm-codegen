@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ai.relational.orm.codegen/src" modelPluginID="ai.relational.orm.codegen"
+    modelName="ORM2Diagram" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="" importerID="org.eclipse.xsd.ecore.importer" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.xsd.ecore.importer">
+    <details key="createMap" value="true"/>
+  </genAnnotations>
+  <foreignModel>file:/Users/mbur/Desktop/Schemas/ORM2Diagram.xsd</foreignModel>
+  <genPackages prefix="Diagram" basePackage="edu.neumont.schemas.orm._2006._04.orm"
+      resource="XML" disposableProviderFactory="true" ecorePackage="diagram.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diagram.ecore#//ConstraintDisplayPositionType">
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//ConstraintDisplayPositionType/Top"/>
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//ConstraintDisplayPositionType/Bottom"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diagram.ecore#//DisplayOrientationType">
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayOrientationType/Horizontal"/>
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayOrientationType/VerticalRotatedRight"/>
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayOrientationType/VerticalRotatedLeft"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diagram.ecore#//DisplayRelatedTypesType">
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayRelatedTypesType/AttachAllTypes"/>
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayRelatedTypesType/AttachSubtypes"/>
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayRelatedTypesType/AttachSupertypes"/>
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayRelatedTypesType/AttachNoTypes"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diagram.ecore#//DisplayRoleNamesType">
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayRoleNamesType/UserDefault"/>
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayRoleNamesType/Off"/>
+      <genEnumLiterals ecoreEnumLiteral="diagram.ecore#//DisplayRoleNamesType/On"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="diagram.ecore#//ConstraintDisplayPositionTypeObject"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//DisplayOrientationTypeObject"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//DisplayRelatedTypesTypeObject"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//DisplayRoleNamesTypeObject"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//MaximumDisplayedColumnsType"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//MaximumDisplayedColumnsTypeObject"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//MaximumDisplayedValuesType"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//MaximumDisplayedValuesTypeObject"/>
+    <genClasses ecoreClass="diagram.ecore#//CardinalityConstraintShapeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//CardinalityConstraintShapeType/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//DocumentRoot/diagramExtensionShape"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//DocumentRoot/factTypeRelativeExtensionShape"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//DocumentRoot/objectTypeRelativeExtensionShape"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//DocumentRoot/oRMDiagram"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//DocumentRoot/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//ExternalConstraintShapeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//ExternalConstraintShapeType/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//FactTypeShapeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//FactTypeShapeType/relativeShapes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//FactTypeShapeType/subject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//FactTypeShapeType/roleDisplayOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//FactTypeShapeType/constraintDisplayPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//FactTypeShapeType/displayAsObjectType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//FactTypeShapeType/displayOrientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//FactTypeShapeType/displayRelatedTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//FactTypeShapeType/displayRoleNames"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//FactTypeShapeType/expandRefMode"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//FrequencyConstraintShapeType"/>
+    <genClasses ecoreClass="diagram.ecore#//ModelNoteShapeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//ModelNoteShapeType/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//ObjectTypeShapeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//ObjectTypeShapeType/relativeShapes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//ObjectTypeShapeType/subject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ObjectTypeShapeType/displayRelatedTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ObjectTypeShapeType/expandRefMode"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//ORMDiagramType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//ORMDiagramType/shapes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//ORMDiagramType/subject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ORMDiagramType/autoPopulateShapes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ORMDiagramType/baseFontName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ORMDiagramType/baseFontSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ORMDiagramType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ORMDiagramType/isCompleteView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ORMDiagramType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//ReadingShapeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//ReadingShapeType/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//RelativeShapesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute diagram.ecore#//RelativeShapesType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType/objectifiedFactTypeNameShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType/readingShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType/valueConstraintShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType/roleNameShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType/cardinalityConstraintShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//RelativeShapesType/factTypeRelativeExtensionShapeGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType/factTypeRelativeExtensionShape"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//RelativeShapesType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute diagram.ecore#//RelativeShapesType1/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType1/valueConstraintShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType1/cardinalityConstraintShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//RelativeShapesType1/objectTypeRelativeExtensionShapeGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RelativeShapesType1/objectTypeRelativeExtensionShape"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//RingConstraintShapeType"/>
+    <genClasses ecoreClass="diagram.ecore#//RoleDisplayOrderType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute diagram.ecore#//RoleDisplayOrderType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//RoleDisplayOrderType/role"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//RoleNameShapeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//RoleNameShapeType/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//RoleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//RoleType/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//ShapesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute diagram.ecore#//ShapesType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//ShapesType/objectTypeShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//ShapesType/factTypeShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//ShapesType/externalConstraintShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//ShapesType/frequencyConstraintShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//ShapesType/ringConstraintShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//ShapesType/valueComparisonConstraintShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//ShapesType/modelNoteShape"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ShapesType/diagramExtensionShapeGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//ShapesType/diagramExtensionShape"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="diagram.ecore#//ShapeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ShapeType/absoluteBounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ShapeType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ShapeType/isExpanded"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//SubjectRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//SubjectRef/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//ValueComparisonConstraintShapeType"/>
+    <genClasses ecoreClass="diagram.ecore#//ValueConstraintShapeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//ValueConstraintShapeType/subject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ValueConstraintShapeType/maximumDisplayedColumns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ValueConstraintShapeType/maximumDisplayedValues"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
