@@ -1,5 +1,7 @@
 package ai.relational.orm.codegen;
 
+import static ai.relational.orm.codegen.GeneratorHelper.extractOrmModelRoot;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -8,8 +10,6 @@ import java.util.Map;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.util.FeatureMap;
-import org.eclipse.emf.ecore.util.FeatureMap.Entry;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.junit.Test;
 
@@ -26,16 +26,7 @@ public class GeneratorRunner {
 				GeneratorHelper.createPreprocessedModelFile("/Users/mbur/git/att-dispatch/dispatch_schema.orm"));
 		DocumentRoot rootObj = (DocumentRoot) res.getContents().get(0);
 
-		ORMModelType model = null;
-		FeatureMap containments = rootObj.getORM2().getAny();
-		for (Entry entry : containments) {
-			Object value = entry.getValue();
-			if (value instanceof ORMModelType) {
-				model = (ORMModelType) value;
-			} else {
-				System.out.println(value);
-			}
-		}
+		ORMModelType model = extractOrmModelRoot(rootObj);
 		
 		OrmCodeGenerator.generate(model);
 
